@@ -1,0 +1,365 @@
+{
+	"info": {
+		"_postman_id": "1506b50b-50ee-44c6-9456-de41827e2306",
+		"name": "ATMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25660010"
+	},
+	"item": [
+		{
+			"name": "userAuth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"sahil\",\n    \"password\":\"123456\",\n    \"name\":\"sahil\",\n    \"email\":\"bansal2210sahil@gmail.com\",\n    \"phone\":\"9479875600\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/auth/register"
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\":\"sahil\",\n    \"password\":\"123456\",\n    \"name\":\"sahil\",\n    \"email\":\"bansal2210sahil@gmail.com\",\n    \"phone\":\"9479875600\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:5000/api/auth/register"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "165"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a5-qsqgyynTjKrozCa7vQYizryC3ak\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Aug 2024 16:23:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 400,\n    \"msg\": \"Username already taken\",\n    \"data\": {\n        \"username\": \"sahil\",\n        \"password\": \"123456\",\n        \"name\": \"sahil\",\n        \"email\": \"bansal2210sahil@gmail.com\",\n        \"phone\": \"9479875600\"\n    }\n}"
+						},
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\":\"sahil\",\n    \"password\":\"123456\",\n    \"name\":\"sahil\",\n    \"email\":\"bansal2210sahil@gmail.com\",\n    \"phone\":\"9479875600\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:5000/api/auth/register"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "168"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a8-2mE36v4cHpYF00RTu39MCPBsw3w\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Aug 2024 16:24:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"msg\": \"User Created Successfully\",\n    \"Data\": {\n        \"username\": \"sahil\",\n        \"password\": \"123456\",\n        \"name\": \"sahil\",\n        \"email\": \"bansal2210sahil@gmail.com\",\n        \"phone\": \"9479875600\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"sahil\",\n    \"password\":\"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/auth/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Folder",
+			"item": [
+				{
+					"name": "get books",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMDFKNDdDMzI0NFBQR0dUSkFFWTNOSlhUUzMiLCJ1c2VybmFtZSI6InNhaGlsIiwiaWF0IjoxNzIyNTI5NDcxfQ.9NQ6WhfbsFcAoZ1PA-oB3NhHuU0tWwCTjll4qXn3Idc",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:5000/api/books"
+					},
+					"response": []
+				},
+				{
+					"name": "book details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMDFKNDdDMzI0NFBQR0dUSkFFWTNOSlhUUzMiLCJ1c2VybmFtZSI6InNhaGlsIiwiaWF0IjoxNzIyNTI5NDcxfQ.9NQ6WhfbsFcAoZ1PA-oB3NhHuU0tWwCTjll4qXn3Idc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/books/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"books",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9914e752-cd21-462c-baf2-e710b3c1401b"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "Order List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMDFKNDdDMzI0NFBQR0dUSkFFWTNOSlhUUzMiLCJ1c2VybmFtZSI6InNhaGlsIiwiaWF0IjoxNzIyNTI5NDcxfQ.9NQ6WhfbsFcAoZ1PA-oB3NhHuU0tWwCTjll4qXn3Idc",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:5000/api/orders"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMDFKNDdDMzI0NFBQR0dUSkFFWTNOSlhUUzMiLCJ1c2VybmFtZSI6InNhaGlsIiwiaWF0IjoxNzIyNTI5NDcxfQ.9NQ6WhfbsFcAoZ1PA-oB3NhHuU0tWwCTjll4qXn3Idc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/orders/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"orders",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "01J47CSNDCZ2M6X4QK19D10R6W"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMDFKNDdDMzI0NFBQR0dUSkFFWTNOSlhUUzMiLCJ1c2VybmFtZSI6InNhaGlsIiwiaWF0IjoxNzIyNTI5NDcxfQ.9NQ6WhfbsFcAoZ1PA-oB3NhHuU0tWwCTjll4qXn3Idc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"remark\":\"reamark non mandatory to add\",\n    \"order_items\":[\n        {\n            \"book_id\":\"fc0b5a88-4238-4c42-8969-368b28e7f9c2\",\n            \"qty\":2\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/orders"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "carts",
+			"item": []
+		},
+		{
+			"name": "Cart items",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMDFKNDdDMzI0NFBQR0dUSkFFWTNOSlhUUzMiLCJ1c2VybmFtZSI6InNhaGlsIiwiaWF0IjoxNzIyNTI5NDcxfQ.9NQ6WhfbsFcAoZ1PA-oB3NhHuU0tWwCTjll4qXn3Idc",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:5000/api/cart"
+			},
+			"response": []
+		},
+		{
+			"name": "create cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMDFKNDdDMzI0NFBQR0dUSkFFWTNOSlhUUzMiLCJ1c2VybmFtZSI6InNhaGlsIiwiaWF0IjoxNzIyNTI5NDcxfQ.9NQ6WhfbsFcAoZ1PA-oB3NhHuU0tWwCTjll4qXn3Idc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"book_id\":\"9914e752-cd21-462c-baf2-e710b3c1401b\",\n    \"qty\":3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/cart"
+			},
+			"response": []
+		},
+		{
+			"name": "delete cart item",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMDFKNDdDMzI0NFBQR0dUSkFFWTNOSlhUUzMiLCJ1c2VybmFtZSI6InNhaGlsIiwiaWF0IjoxNzIyNTI5NDcxfQ.9NQ6WhfbsFcAoZ1PA-oB3NhHuU0tWwCTjll4qXn3Idc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/cart/:itemId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"cart",
+						":itemId"
+					],
+					"variable": [
+						{
+							"key": "itemId",
+							"value": "01J47CJRTKR2K6NPS3TKQ5996R"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
